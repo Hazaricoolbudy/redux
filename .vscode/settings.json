@@ -1,6 +1,7 @@
 {
     "diffEditor.wordWrap": "on",
     "editor.wordWrapColumn": 70,
-    "debug.console.wordWrap": false,
-    "editor.accessibilitySupport": "on"
+    "debug.console.wordWrap": true,
+    "editor.accessibilitySupport": "auto",
+    "editor.wordWrap": "on"
 }

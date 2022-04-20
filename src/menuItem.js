@@ -1,9 +1,12 @@
 export const menuItems = [
     {
-        title: "Home"
+        title: "For Students",
+        submenu:[{
+            title:"Rigister"
+        }]
     },
     {
-        title: "Services",
+        title: "For Alumani",
         submenu: [
             {
                 title: "web design"
@@ -34,7 +37,7 @@ export const menuItems = [
 
     },
     {
-        title: "About"
+        title: "Blogs"
     }
 
 ]
