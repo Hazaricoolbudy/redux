@@ -6,8 +6,9 @@ const MenuItems = ({ items, depthLevel }) => {
     let ref = useRef()
     useEffect(() => {
         const handler = (event) => {
-            if (dropdown && ref.current && !ref.current.contains(event.target)) {
+            if (dropdown && ref.current && !ref.current.contains(event.target) ) {
                 SetDropdwon(false);
+                event.preventDefault() // for preventing default behavior but it is not working in mobile view
             }
 
         }
@@ -25,6 +26,7 @@ const MenuItems = ({ items, depthLevel }) => {
     const onMouseLeave = () => {
         window.innerWidth > 960 && SetDropdwon(false)
     }
+    
     return (
         <>
             <li className="menu-items " ref={ref} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
@@ -41,9 +43,12 @@ const MenuItems = ({ items, depthLevel }) => {
                     </>
                 ) : (
                     <a href="/#" >{items.title}</a>
+                  
                 )}
-            </li>
+                
 
+            </li>
+                          
         </>
     )
 }
